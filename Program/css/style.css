@@ -1,0 +1,272 @@
+/*----The Animation Code----*/
+@keyframes AddToDo {
+  from {
+    background-color: green;
+    right: 300px;
+  }
+  to {
+    background-color: white;
+    right: 0px;
+  }
+}
+
+@keyframes RemoveToDo {
+  from {
+    background-color: red;
+    right: 0px;
+  }
+  to {
+    background-color: white;
+    left: 400px;
+  }
+}
+
+/* ------------ youtube.com/CodeExplained ------------ */
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #293251;
+  font-family: "Titillium Web", sans-serif;
+}
+
+/* ------------ container ------------ */
+.container {
+  padding: 10px;
+  width: 380px;
+  margin: 0 auto;
+}
+
+/* ------------ header ------------ */
+.header {
+  width: 100%;
+  height: 200px;
+  background-image: url("../img/aurora.gif");
+  background-size: 100% 200%;
+  background-repeat: no-repeat;
+  border-radius: 15px 15px 0 0;
+  position: relative;
+}
+.clear {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+}
+.clear i {
+  font-size: 30px;
+  color: #fff;
+}
+.clear i:hover {
+  cursor: pointer;
+  text-shadow: 1px 3px 5px #000;
+  transform: rotate(45deg);
+}
+#date {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: #fff;
+  font-size: 20px;
+  font-family: "Titillium Web", sans-serif;
+}
+
+/* ------------ content ------------ */
+.content {
+  width: 380px;
+  height: 350px;
+  max-height: 350px;
+  background-color: #fff;
+  overflow: auto;
+}
+.content::-webkit-scrollbar {
+  display: none;
+}
+.content ul {
+  padding: 0;
+  margin: 0;
+}
+.item {
+  width: 380px;
+  height: 45px;
+  min-height: 45px;
+  position: relative;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  animation-name: AddToDo;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.item-deleted {
+  width: 380px;
+  height: 45px;
+  min-height: 45px;
+  position: relative;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  animation-name: RemoveToDo;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.item i.co {
+  position: absolute;
+  font-size: 25px;
+  padding-left: 5px;
+  left: 15px;
+  top: 10px;
+}
+.item i.co:hover {
+  cursor: pointer;
+}
+.fa-check-circle {
+  color: #6eb200;
+}
+.item p.text {
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  font-size: 20px;
+  left: 50px;
+  top: 5px;
+  background-color: #fff, 0;
+  max-width: 285px;
+}
+.lineThrough {
+  text-decoration: line-through;
+  color: #ccc;
+}
+.item i.de {
+  position: absolute;
+  font-size: 25px;
+  right: 15px;
+  top: 10px;
+}
+.item i.de:hover {
+  color: #af0000;
+  cursor: pointer;
+}
+/* ------------ add item ------------ */
+.add-to-do {
+  position: relative;
+  width: 360px;
+  height: 40px;
+  background-color: #fff;
+  padding: 10px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 0 0 15px 15px;
+}
+.add-to-do i {
+  position: absolute;
+  font-size: 40px;
+  color: #4162f6;
+}
+
+.add-to-do input {
+  position: absolute;
+  left: 50px;
+  height: 35px;
+  width: 310px;
+  background-color: transparent;
+  border: none;
+  font-size: 20px;
+  padding-left: 10px;
+}
+.add-to-do input::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: #4162f6;
+  font-family: "Titillium Web", sans-serif;
+  font-size: 20px;
+}
+.add-to-do input::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #4162f6;
+  font-family: "Titillium Web", sans-serif;
+  font-size: 20px;
+}
+.add-to-do input:-ms-input-placeholder {
+  /* IE 10+ */
+  color: #4162f6;
+  font-family: "Titillium Web", sans-serif;
+  font-size: 20px;
+}
+.add-to-do input:-moz-placeholder {
+  /* Firefox 18- */
+  color: #4162f6;
+  font-family: "Titillium Web", sans-serif;
+  font-size: 20px;
+}
+
+.editing {
+  color: green;
+}
+
+.weather {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  left: 20px;
+  top: 20px;
+}
+
+.weatherLink {
+  position: relative;
+  margin-top: 0px;
+}
+
+.weatherImage {
+  position: relative;
+}
+
+.weatherText {
+  position: relative;
+  color: white;
+  font-weight: bold;
+  margin-top: 0px;
+  font-size: 15px;
+}
+
+.button_div {
+  padding-right: 10px;
+  float: right;
+  width: 50px;
+  height: 50px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button_div img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.button_div .img_overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.app-title p {
+  text-align: center;
+  padding: 15px;
+  margin: 0 auto;
+  font-size: 40px;
+  font-weight: bold;
+  color: #293251;
+}
+
+canvas {
+  left: 0;
+}
